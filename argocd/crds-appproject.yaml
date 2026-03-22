@@ -1,0 +1,93 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: appprojects.argoproj.io
+spec:
+  group: argoproj.io
+  names:
+    kind: AppProject
+    listKind: AppProjectList
+    plural: appprojects
+    shortNames: [appproj, appprojs]
+    singular: appproject
+  scope: Namespaced
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        x-kubernetes-preserve-unknown-fields: true
+    subresources:
+      status: {}
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: applications.argoproj.io
+spec:
+  group: argoproj.io
+  names:
+    kind: Application
+    listKind: ApplicationList
+    plural: applications
+    shortNames: [app, apps]
+    singular: application
+  scope: Namespaced
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        x-kubernetes-preserve-unknown-fields: true
+    subresources:
+      status: {}
+    additionalPrinterColumns:
+    - name: Sync Status
+      type: string
+      jsonPath: .status.sync.status
+    - name: Health Status
+      type: string
+      jsonPath: .status.health.status
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: applicationsets.argoproj.io
+spec:
+  group: argoproj.io
+  names:
+    kind: ApplicationSet
+    listKind: ApplicationSetList
+    plural: applicationsets
+    shortNames: [appset, appsets]
+    singular: applicationset
+  scope: Namespaced
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        x-kubernetes-preserve-unknown-fields: true
+    subresources:
+      status: {}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: default
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
