@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1600" height="760" fill="#f8f9fa" rx="8"/>
+
+  <!-- Title -->
+  <text x="800" y="32" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e1e1e">kiranch97 — MLOps Solutions Architecture</text>
+  <text x="800" y="54" text-anchor="middle" font-size="13" fill="#6c757d">Source Control → CI/CD → IaC → Kubernetes → MLOps → Applications</text>
+
+  <!-- L1: Source Control -->
+  <rect x="10" y="70" width="1580" height="75" fill="#dbe4ff" rx="6" opacity="0.7"/>
+  <text x="18" y="86" font-size="13" font-weight="bold" fill="#2563eb">L1 — SOURCE CONTROL</text>
+  <rect x="20" y="90" width="130" height="45" fill="#a5d8ff" rx="5" stroke="#4a9eed"/>
+  <text x="85" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e3a5f">GitHub</text>
+  <text x="85" y="125" text-anchor="middle" font-size="11" fill="#1e3a5f">31 Repos</text>
+  <rect x="165" y="90" width="130" height="45" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="230" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">GitFlow</text>
+  <text x="230" y="125" text-anchor="middle" font-size="11" fill="#7f1d1d">Branching</text>
+  <rect x="310" y="90" width="130" height="45" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="375" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">ADR Docs</text>
+  <text x="375" y="125" text-anchor="middle" font-size="11" fill="#7f1d1d">Architecture</text>
+  <rect x="455" y="90" width="130" height="45" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="520" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">SemVer</text>
+  <text x="520" y="125" text-anchor="middle" font-size="11" fill="#7f1d1d">Changelogs</text>
+
+  <!-- L2: CI/CD -->
+  <rect x="10" y="153" width="1580" height="75" fill="#e5dbff" rx="6" opacity="0.7"/>
+  <text x="18" y="169" font-size="13" font-weight="bold" fill="#6d28d9">L2 — CI/CD PIPELINE</text>
+  <rect x="20" y="173" width="130" height="45" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="85" y="193" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">ArgoCD</text>
+  <text x="85" y="208" text-anchor="middle" font-size="11" fill="#14532d">GitOps CD</text>
+  <rect x="165" y="173" width="130" height="45" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="230" y="193" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Jenkins</text>
+  <text x="230" y="208" text-anchor="middle" font-size="11" fill="#14532d">CI/CD</text>
+  <rect x="310" y="173" width="130" height="45" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="375" y="193" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Maven</text>
+  <text x="375" y="208" text-anchor="middle" font-size="11" fill="#14532d">Build</text>
+  <rect x="455" y="173" width="130" height="45" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="520" y="193" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">GitHub Actions</text>
+  <text x="520" y="208" text-anchor="middle" font-size="11" fill="#7f1d1d">Workflows</text>
+  <rect x="600" y="173" width="130" height="45" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="665" y="193" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">Container</text>
+  <text x="665" y="208" text-anchor="middle" font-size="11" fill="#7f1d1d">Scan</text>
+  <rect x="745" y="173" width="130" height="45" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="810" y="193" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">Container</text>
+  <text x="810" y="208" text-anchor="middle" font-size="11" fill="#7f1d1d">Registry</text>
+
+  <!-- L3: IaC -->
+  <rect x="10" y="236" width="1580" height="75" fill="#d3f9d8" rx="6" opacity="0.7"/>
+  <text x="18" y="252" font-size="13" font-weight="bold" fill="#15803d">L3 — INFRASTRUCTURE AS CODE</text>
+  <rect x="20" y="256" width="145" height="45" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="92" y="276" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Terraform</text>
+  <text x="92" y="291" text-anchor="middle" font-size="11" fill="#14532d">terraform repo</text>
+  <rect x="178" y="256" width="145" height="45" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="250" y="276" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">AWS IaC</text>
+  <text x="250" y="291" text-anchor="middle" font-size="11" fill="#14532d">aws-codes</text>
+  <rect x="336" y="256" width="145" height="45" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="408" y="276" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">K8s Manifests</text>
+  <text x="408" y="291" text-anchor="middle" font-size="11" fill="#14532d">k8s_deployments</text>
+  <rect x="494" y="256" width="145" height="45" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="566" y="276" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">Helm Charts</text>
+  <text x="566" y="291" text-anchor="middle" font-size="11" fill="#7f1d1d">Library</text>
+  <rect x="652" y="256" width="145" height="45" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="724" y="276" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">Multi-Env</text>
+  <text x="724" y="291" text-anchor="middle" font-size="11" fill="#7f1d1d">dev/stg/prod</text>
+
+  <!-- L4: Kubernetes -->
+  <rect x="10" y="319" width="1580" height="85" fill="#c3fae8" rx="6" opacity="0.6"/>
+  <text x="18" y="335" font-size="13" font-weight="bold" fill="#0f766e">L4 — KUBERNETES PLATFORM</text>
+  <rect x="20" y="340" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="97" y="360" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">nginx-Ingress</text>
+  <text x="97" y="374" text-anchor="middle" font-size="11" fill="#14532d">claude-project1</text>
+  <text x="97" y="387" text-anchor="middle" font-size="10" fill="#0f766e">NodePort: 30080</text>
+  <rect x="188" y="340" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="265" y="360" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">ArgoCD UI</text>
+  <text x="265" y="374" text-anchor="middle" font-size="11" fill="#14532d">claude-project1</text>
+  <text x="265" y="387" text-anchor="middle" font-size="10" fill="#0f766e">NodePort: 30080</text>
+  <rect x="356" y="340" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="433" y="360" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Grafana+Loki</text>
+  <text x="433" y="374" text-anchor="middle" font-size="11" fill="#14532d">platform_logging</text>
+  <text x="433" y="387" text-anchor="middle" font-size="10" fill="#0f766e">NodePort: 30030</text>
+  <rect x="524" y="340" width="155" height="56" fill="#fff3bf" rx="5" stroke="#f59e0b"/>
+  <text x="601" y="360" text-anchor="middle" font-size="12" font-weight="bold" fill="#713f12">GPU RTX4060</text>
+  <text x="601" y="374" text-anchor="middle" font-size="11" fill="#713f12">nvidia-plugin</text>
+  <text x="601" y="387" text-anchor="middle" font-size="10" fill="#b45309">In Progress</text>
+  <rect x="692" y="340" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="769" y="360" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Vault + RBAC</text>
+  <text x="769" y="374" text-anchor="middle" font-size="11" fill="#14532d">platform_security</text>
+  <text x="769" y="387" text-anchor="middle" font-size="10" fill="#0f766e">P6</text>
+  <rect x="860" y="340" width="155" height="56" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="937" y="360" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">HPA / KEDA</text>
+  <text x="937" y="374" text-anchor="middle" font-size="11" fill="#7f1d1d">AutoScaling</text>
+  <text x="937" y="387" text-anchor="middle" font-size="10" fill="#ef4444">Missing</text>
+
+  <!-- L5: MLOps -->
+  <rect x="10" y="412" width="1580" height="85" fill="#eebefa" rx="6" opacity="0.4"/>
+  <text x="18" y="428" font-size="13" font-weight="bold" fill="#9d174d">L5 — ML / AI PLATFORM (MLOps)</text>
+  <rect x="20" y="433" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="97" y="453" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Jupyter K8s</text>
+  <text x="97" y="467" text-anchor="middle" font-size="11" fill="#14532d">ML_project2</text>
+  <text x="97" y="480" text-anchor="middle" font-size="10" fill="#0f766e">NodePort: 30088</text>
+  <rect x="188" y="433" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="265" y="453" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">MLflow Registry</text>
+  <text x="265" y="467" text-anchor="middle" font-size="11" fill="#14532d">ML_project3</text>
+  <text x="265" y="480" text-anchor="middle" font-size="10" fill="#0f766e">NodePort: 30085</text>
+  <rect x="356" y="433" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="433" y="453" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">FastAPI Serving</text>
+  <text x="433" y="467" text-anchor="middle" font-size="11" fill="#14532d">ML_serving</text>
+  <text x="433" y="480" text-anchor="middle" font-size="10" fill="#0f766e">NodePort: 30086</text>
+  <rect x="524" y="433" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="601" y="453" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Airflow</text>
+  <text x="601" y="467" text-anchor="middle" font-size="11" fill="#14532d">ML_pipelines</text>
+  <text x="601" y="480" text-anchor="middle" font-size="10" fill="#0f766e">NodePort: 30095</text>
+  <rect x="692" y="433" width="155" height="56" fill="#fff3bf" rx="5" stroke="#f59e0b"/>
+  <text x="769" y="453" text-anchor="middle" font-size="12" font-weight="bold" fill="#713f12">Kubeflow</text>
+  <text x="769" y="467" text-anchor="middle" font-size="11" fill="#713f12">kubeflow (private)</text>
+  <text x="769" y="480" text-anchor="middle" font-size="10" fill="#b45309">In Progress</text>
+  <rect x="860" y="433" width="155" height="56" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="937" y="453" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">Model Monitor</text>
+  <text x="937" y="467" text-anchor="middle" font-size="11" fill="#7f1d1d">Drift Detection</text>
+  <text x="937" y="480" text-anchor="middle" font-size="10" fill="#ef4444">Missing</text>
+  <rect x="1028" y="433" width="155" height="56" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="1105" y="453" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">A/B Testing</text>
+  <text x="1105" y="467" text-anchor="middle" font-size="11" fill="#7f1d1d">Canary Models</text>
+  <text x="1105" y="480" text-anchor="middle" font-size="10" fill="#ef4444">Missing</text>
+
+  <!-- L6: Apps -->
+  <rect x="10" y="505" width="1580" height="85" fill="#ffd8a8" rx="6" opacity="0.6"/>
+  <text x="18" y="521" font-size="13" font-weight="bold" fill="#b45309">L6 — APPLICATIONS &amp; DATA</text>
+  <rect x="20" y="526" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="97" y="546" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">Pred.Maintenance</text>
+  <text x="97" y="560" text-anchor="middle" font-size="11" fill="#14532d">ML-AL-Codes_v2</text>
+  <text x="97" y="573" text-anchor="middle" font-size="10" fill="#0f766e">FastAPI+Streamlit</text>
+  <rect x="188" y="526" width="155" height="56" fill="#fff3bf" rx="5" stroke="#f59e0b"/>
+  <text x="265" y="546" text-anchor="middle" font-size="12" font-weight="bold" fill="#713f12">Spam Classifier</text>
+  <text x="265" y="560" text-anchor="middle" font-size="11" fill="#713f12">Notebook (LSTM)</text>
+  <text x="265" y="573" text-anchor="middle" font-size="10" fill="#b45309">In Progress</text>
+  <rect x="356" y="526" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="433" y="546" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">MinIO Data Lake</text>
+  <text x="433" y="560" text-anchor="middle" font-size="11" fill="#14532d">data_platform</text>
+  <text x="433" y="573" text-anchor="middle" font-size="10" fill="#0f766e">NodePort: 30091</text>
+  <rect x="524" y="526" width="155" height="56" fill="#b2f2bb" rx="5" stroke="#22c55e"/>
+  <text x="601" y="546" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">PostgreSQL</text>
+  <text x="601" y="560" text-anchor="middle" font-size="11" fill="#14532d">data_platform</text>
+  <text x="601" y="573" text-anchor="middle" font-size="10" fill="#0f766e">NodePort: 30093</text>
+  <rect x="692" y="526" width="155" height="56" fill="#fff3bf" rx="5" stroke="#f59e0b"/>
+  <text x="769" y="546" text-anchor="middle" font-size="12" font-weight="bold" fill="#713f12">Open WebUI</text>
+  <text x="769" y="560" text-anchor="middle" font-size="11" fill="#713f12">open-webui (private)</text>
+  <text x="769" y="573" text-anchor="middle" font-size="10" fill="#b45309">In Progress</text>
+  <rect x="860" y="526" width="155" height="56" fill="#ffc9c9" rx="5" stroke="#ef4444"/>
+  <text x="937" y="546" text-anchor="middle" font-size="12" font-weight="bold" fill="#7f1d1d">API Gateway</text>
+  <text x="937" y="560" text-anchor="middle" font-size="11" fill="#7f1d1d">Kong / AWS GW</text>
+  <text x="937" y="573" text-anchor="middle" font-size="10" fill="#ef4444">Missing</text>
+
+  <!-- Legend -->
+  <rect x="10" y="600" width="1580" height="50" fill="#f1f3f5" rx="6" stroke="#dee2e6"/>
+  <text x="25" y="622" font-size="13" font-weight="bold" fill="#1e1e1e">LEGEND:</text>
+  <rect x="105" y="609" width="140" height="26" fill="#b2f2bb" rx="4" stroke="#22c55e"/>
+  <text x="175" y="626" text-anchor="middle" font-size="12" fill="#14532d">EXISTS (deployed)</text>
+  <rect x="260" y="609" width="140" height="26" fill="#fff3bf" rx="4" stroke="#f59e0b"/>
+  <text x="330" y="626" text-anchor="middle" font-size="12" fill="#713f12">PARTIAL / In Progress</text>
+  <rect x="415" y="609" width="140" height="26" fill="#ffc9c9" rx="4" stroke="#ef4444"/>
+  <text x="485" y="626" text-anchor="middle" font-size="12" fill="#7f1d1d">GAP / Not built yet</text>
+  <text x="620" y="622" font-size="12" fill="#495057">NodePorts: nginx:30080 | ArgoCD:30080 | Jupyter:30088 | MLflow:30085 | Grafana:30030 | Serving:30086 | Airflow:30095 | MinIO:30091 | pgAdmin:30092</text>
+
+  <!-- Coverage Badge -->
+  <rect x="1380" y="609" width="200" height="30" fill="#4a9eed" rx="5"/>
+  <text x="1480" y="628" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Overall Coverage: ~45%</text>
+</svg>
