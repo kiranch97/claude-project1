@@ -1,0 +1,114 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: webapp
+  labels:
+    app.kubernetes.io/name: webapp
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  namespace: webapp
+  labels:
+    app: webapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      initContainers:
+      - name: init-html
+        image: busybox
+        command:
+        - sh
+        - -c
+        - |
+          cat > /html/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>My K8s Web App</title>
+            <style>
+              body { font-family: Arial, sans-serif; background: #1a1a2e; color: #eee;
+                     display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+              .card { background: #16213e; border-radius: 16px; padding: 40px 60px;
+                      text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+              h1 { color: #4a9eed; font-size: 2.5em; margin-bottom: 10px; }
+              p { color: #aaa; font-size: 1.1em; }
+              .badge { display: inline-block; background: #22c55e; color: #fff;
+                       border-radius: 8px; padding: 4px 16px; margin-top: 20px; font-size: 0.9em; }
+            </style>
+          </head>
+          <body>
+            <div class="card">
+              <h1>Hello from Kubernetes!</h1>
+              <p>Simple Web App running behind nginx-ingress</p>
+              <p>Accessible via <strong>webapp.local:30080</strong></p>
+              <span class="badge">Running</span>
+            </div>
+          </body>
+          </html>
+          EOF
+        volumeMounts:
+        - name: html
+          mountPath: /html
+      containers:
+      - name: webapp
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+        resources:
+          requests:
+            cpu: 50m
+            memory: 64Mi
+          limits:
+            cpu: 200m
+            memory: 128Mi
+      volumes:
+      - name: html
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp
+  namespace: webapp
+  labels:
+    app: webapp
+spec:
+  selector:
+    app: webapp
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webapp-ingress
+  namespace: webapp
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: webapp.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: webapp
+            port:
+              number: 80
